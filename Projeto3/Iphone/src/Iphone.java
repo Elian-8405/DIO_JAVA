@@ -9,7 +9,9 @@ public class Iphone {
         int operacao;
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("---------------------------");
+        do {
+            
+            System.out.println("---------------------------");
             System.out.println("|          IPHONE         |");
             System.out.println("|                         |");
             System.out.println("|                         |");
@@ -17,7 +19,7 @@ public class Iphone {
             System.out.println("| 1 - Ouvir Musica        |");
             System.out.println("|                         |");
             System.out.println("|                         |");
-            System.out.println("| 2 - Fazer Ligação       |");
+            System.out.println("| 2 - Telefonia           |");
             System.out.println("|                         |");
             System.out.println("|                         |");
             System.out.println("| 3 - Navegar na Internet |");
@@ -32,7 +34,6 @@ public class Iphone {
             System.out.println("---------------------------");
     
             System.out.println("Pressione o botão da atividade");
-        do {
             
             operacao = scanner.nextInt();
             switch (operacao) {
@@ -44,6 +45,7 @@ public class Iphone {
                     System.out.println("P - para pausar");
                     System.out.println("Opção: ");
                     playerOption = scanner.nextInt();
+                    scanner.nextLine();
                     if(playerOption == 1){
                         String musica;
                         System.out.println("Digite o nome da musica: ");
@@ -67,6 +69,7 @@ public class Iphone {
                     System.out.println("3 - Para gravar audio");
                     System.out.println("Digite a opção:");
                     telefoneOperation = scanner.nextInt();
+                    scanner.nextLine();
                     if(telefoneOperation == 1){
                         System.out.println("Digite o numero:");
                         numero = scanner.nextLine();
@@ -87,9 +90,11 @@ public class Iphone {
                     System.out.println("3 - Para recarregar guia");
                     System.out.println("Digite a opção:");
                     navOption = scanner.nextInt();
+                    scanner.nextLine();
+                    
                     if(navOption == 1){
                         System.out.println("Digite o link do site:");
-                        site = scanner.nextLine();
+                        site = scanner.next();
                         nav.exibirPagina(site);
                     }else if(navOption == 2){
                         
@@ -105,6 +110,7 @@ public class Iphone {
             }
             
         } while (operacao != 0);
+        scanner.close();
        
     }
 }
