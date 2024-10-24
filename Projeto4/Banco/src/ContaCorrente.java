@@ -1,5 +1,11 @@
 public class ContaCorrente extends Conta{
-    public ContaCorrente(int agencia, int numero) {
-        super(agencia, numero);
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
+
+    public void imprimirExtrato(){
+        System.out.println("Extrato da conta corrente");
+        super.imprimirExtrato();
+    }
+
 }

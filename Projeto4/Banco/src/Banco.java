@@ -19,7 +19,12 @@ public class Banco {
     }
 
     public void listarContas(){
-        System.out.println(contas);
+
+        for(Conta c : contas){
+            System.out.println(c);
+
+        }
+
     }
 
 
