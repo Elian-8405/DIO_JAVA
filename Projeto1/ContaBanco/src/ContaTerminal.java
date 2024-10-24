@@ -4,7 +4,7 @@ public class ContaTerminal {
     private int Numero;
     private String Agencia;
     private String nomeCliente;
-    private float Saldo;
+    private double Saldo;
 
     public ContaTerminal() {
       
@@ -12,27 +12,28 @@ public class ContaTerminal {
 
 
     public String getAgencia() {
-        return Agencia;
+        return this.Agencia;
     }
 
     public void setAgencia(String agencia) {
-        Agencia = agencia;
+        this.Agencia = agencia;
     }
 
     public String getNomeCliente() {
-        return nomeCliente;
+        return this.nomeCliente;
     }
 
     public void setNomeCliente(String nomeCliente) {
         this.nomeCliente = nomeCliente;
     }
 
-    public float getSaldo() {
-        return Saldo;
+    public double getSaldo() {
+        return this.Saldo;
+        
     }
 
-    public void setSaldo(float saldo) {
-        Saldo = saldo;
+    public void setSaldo(double saldo) {
+        this.Saldo = saldo;
     }
 
     public int getNumero() {
